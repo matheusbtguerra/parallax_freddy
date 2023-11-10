@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -11,23 +12,25 @@ body {
     background-color: #000;
     color: #fff;
     text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 18px #fff,
-      0 0 38px rgb(115, 0, 255),
-      0 0 76px rgb(115, 0, 255),
-      0 0 86px rgb(115, 0, 255),
-      0 0 95px rgb(115, 0, 255),
-      0 0 135px rgb(115, 0, 255);
+      0 0 6px #fff,
+      0 0 9px #fff,
+      0 0 12px rgb(149, 20, 209);
       text-align: center;
 }
 
 h1 {
-    animation: flicker 2s infinite alternate;     
+    animation: flicker 2s infinite alternate;
+    padding: 1%;
+    margin-bottom: 10%;    
   }
 
 h2 {
-    animation: flicker 1.5s infinite alternate;     
+    animation: flicker 2s infinite alternate;   
+    padding: 1%;  
+  }
+
+  footer {
+    margin-top: 7%;
   }
 
 .wrapper {
@@ -41,19 +44,37 @@ header {
     margin-bottom: 7%;
 }
 
+.footer-text {
+    padding-bottom: 1%;
+    padding-top: 1%;
+    background-color: #ffed00;
+    border-top: solid 8px #14ff00;
+}
+
+.footer-gif {
+    animation: andar 10s infinite ;
+    text-align: left;
+}
+
 .main-img{
     height: 100%;
     width: 100%;
 }
 
+
 .container{
     width: 100%;
     max-width: 760px;
     margin: 0 auto;
-    padding: ;
+    padding-top: 2%;
+    padding-bottom: 2%;
     animation: surgir 1s ease;
     animation-timeline: view();
-    animation-range: cover 0 cover 40%;
+    animation-range: cover 0 cover 50%;
+}
+
+.border-video {
+    border: solid 5px #5e17eb;
 }
 
 section.modulo.content{
@@ -102,22 +123,40 @@ section.modulo.parallax-3{
 @keyframes flicker {
     
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  
         text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 18px #fff,
-        0 0 38px rgb(115, 0, 255),
-        0 0 76px rgb(115, 0, 255),
-        0 0 86px rgb(115, 0, 255),
-        0 0 95px rgb(115, 0, 255),
-        0 0 135px rgb(115, 0, 255);
-    
-    }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-    }    
+        0 0 6px #fff,
+        0 0 9px rgb(149, 20, 209),
+        0 0 10px rgb(149, 20, 209);
   }
+
+  20%, 24%, 55% {        
+    text-shadow: none;
+}    
+
+  
+  }
+
+
+@keyframes surgir  {
+    from {
+        opacity: 0;
+        translate: -100vw 0;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes andar {
+    from {
+        translate: -3vw 0;
+    }
+
+    to {
+        translate: 100vw 0;
+    }
+}
 
 
