@@ -107,6 +107,7 @@ section.modulo.parallax:after{
 
 section.modulo.parallax-1{
     background-image: url(https://images7.alphacoders.com/133/1334626.jpg);
+    overflow: hidden;
 }
 section.modulo.parallax-2{
     background-image: url(https://images3.alphacoders.com/133/1334638.jpg);
