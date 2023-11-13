@@ -61,6 +61,9 @@ header {
     width: 100%;
 }
 
+.overflow-0 {
+    overflow: hidden;
+}
 
 .container{
     width: 100%;
@@ -68,18 +71,27 @@ header {
     margin: 0 auto;
     padding-top: 2%;
     padding-bottom: 2%;
+    /* animação com o view bugado (salva nós joão <3)  */
     animation: surgir 1s ease;
     animation-timeline: view();
-    animation-range: cover 0 cover 50%;
+    animation-range: cover 0% cover 50%;
+}
+
+.logo-gif {
+    height: 300px;
+    width: 300px;
 }
 
 .border-video {
     border: solid 5px #5e17eb;
+    width:560px;
+    height:315px; 
 }
 
 section.modulo.content{
     padding: 20px 0;
     background:#000;
+    
 }
 
 section.modulo.parallax{
@@ -138,7 +150,7 @@ section.modulo.parallax-3{
   }
 
 
-@keyframes surgir  {
+  @keyframes surgir  {
     from {
         opacity: 0;
         translate: -100vw 0;
@@ -152,7 +164,7 @@ section.modulo.parallax-3{
 
 @keyframes andar {
     from {
-        translate: -3vw 0;
+        translate: -5vw 0;
     }
 
     to {
@@ -160,4 +172,55 @@ section.modulo.parallax-3{
     }
 }
 
+@media all and (max-width: 620px) {
+    .logo-gif {
+        height: 250px;
+        width: 250px;
+    }
+
+    section.modulo.parallax{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 50vh !important;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .main-img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    h2 {
+        animation: flicker 2s infinite alternate;   
+        padding: 1%; 
+        font-size: 1.2em; 
+      }
+
+      .footer-text {
+        padding-bottom: 1%;
+        padding-top: 1%;
+        background-color: #ffed00;
+        border-top: solid 8px #14ff00;
+        font-size: 1em;
+        text-align: center;
+    }
+    
+    footer div img {
+        height: 120px;
+    }
+
+    .border-video {
+        border: solid 5px #5e17eb;
+        width:354px;
+        height:200px; 
+    }
+
+}
 
