@@ -124,11 +124,12 @@ section.modulo.parallax-1{
 section.modulo.parallax-2{
     background-image: url(https://images3.alphacoders.com/133/1334638.jpg);
 }
+
+
+
 section.modulo.parallax-3{
     background-image: url(https://images5.alphacoders.com/133/1339498.png);
 }
-
-
 
 
 
@@ -164,11 +165,11 @@ section.modulo.parallax-3{
 
 @keyframes andar {
     from {
-        translate: -5vw 0;
+        translate: -5vw 1vw;
     }
 
     to {
-        translate: 100vw 0;
+        translate: 100vw 1vw;
     }
 }
 
@@ -213,7 +214,7 @@ section.modulo.parallax-3{
     }
     
     footer div img {
-        height: 120px;
+        height: 90px;
     }
 
     .border-video {
